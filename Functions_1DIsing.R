@@ -6,7 +6,7 @@ getZ <- function(mu1, mu2, isingStringLength, isingLookupLocation){
   return(Z)
 }
 
-getMu1Mu2 <- function(isingStringSet, isingLookupLocation, mu1=0, mu2=0){
+getMu1Mu2 <- function(isingStringSet, isingLookupLocation, mu1=0, mu2=0.2){
   
   numStrings <- length(isingStringSet)
   if(numStrings == 0){
@@ -58,7 +58,7 @@ getMu1Mu2 <- function(isingStringSet, isingLookupLocation, mu1=0, mu2=0){
     if(mu1 > 2.0 || mu1 < -2.0){
       notMaxMu1 = FALSE
     } 
-    if(mu2 > 2.0 || mu2 < -2.0){
+    if(mu2 > 2.0 || mu2 < 0.0){
       notMaxMu2 = FALSE
     } 
   }
